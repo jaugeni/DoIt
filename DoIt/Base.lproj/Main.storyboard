@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="975.20000000000005" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task-->
         <scene sceneID="f7M-bd-JAf">
             <objects>
-                <viewController id="jiE-AV-iVd" sceneMemberID="viewController">
+                <viewController id="jiE-AV-iVd" customClass="CreateTask" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NzB-nN-cjD"/>
                         <viewControllerLayoutGuide type="bottom" id="7eg-7Z-6mn"/>
@@ -62,8 +63,56 @@
                     <view key="view" contentMode="scaleToFill" id="gPa-h3-Blz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPF-Ep-1XZ">
+                                <rect key="frame" x="163" y="79" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b49-kv-6tV">
+                                <rect key="frame" x="56" y="110" width="263" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrn-iW-pt3">
+                                <rect key="frame" x="147.5" y="170" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="peW-4A-GnL">
+                                <rect key="frame" x="163" y="201" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tov-ye-1YC">
+                                <rect key="frame" x="172" y="262" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="jiE-AV-iVd" eventType="touchUpInside" id="L2L-7K-FcU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QPF-Ep-1XZ" firstAttribute="top" secondItem="NzB-nN-cjD" secondAttribute="bottom" constant="15" id="7jA-Sc-4gt"/>
+                            <constraint firstItem="peW-4A-GnL" firstAttribute="centerX" secondItem="gPa-h3-Blz" secondAttribute="centerX" id="HC8-KE-M8d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b49-kv-6tV" secondAttribute="trailing" constant="40" id="IKU-S0-lNd"/>
+                            <constraint firstItem="b49-kv-6tV" firstAttribute="leading" secondItem="gPa-h3-Blz" secondAttribute="leadingMargin" constant="40" id="K1Z-FF-aU0"/>
+                            <constraint firstItem="tov-ye-1YC" firstAttribute="centerX" secondItem="gPa-h3-Blz" secondAttribute="centerX" id="KDr-8G-sna"/>
+                            <constraint firstItem="tov-ye-1YC" firstAttribute="top" secondItem="peW-4A-GnL" secondAttribute="bottom" constant="30" id="Kjm-w3-BUo"/>
+                            <constraint firstItem="b49-kv-6tV" firstAttribute="top" secondItem="QPF-Ep-1XZ" secondAttribute="bottom" constant="10" id="WNT-Mg-Ckg"/>
+                            <constraint firstItem="b49-kv-6tV" firstAttribute="centerX" secondItem="gPa-h3-Blz" secondAttribute="centerX" id="ZK8-ig-b1P"/>
+                            <constraint firstItem="Wrn-iW-pt3" firstAttribute="top" secondItem="b49-kv-6tV" secondAttribute="bottom" constant="30" id="pG1-yq-5j9"/>
+                            <constraint firstItem="QPF-Ep-1XZ" firstAttribute="centerX" secondItem="gPa-h3-Blz" secondAttribute="centerX" id="pGP-7x-8pW"/>
+                            <constraint firstItem="peW-4A-GnL" firstAttribute="top" secondItem="Wrn-iW-pt3" secondAttribute="bottom" constant="10" id="qMu-oN-ST6"/>
+                            <constraint firstItem="Wrn-iW-pt3" firstAttribute="centerX" secondItem="gPa-h3-Blz" secondAttribute="centerX" id="yK6-c0-X2t"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="importentSwitch" destination="peW-4A-GnL" id="joJ-qb-oPZ"/>
+                        <outlet property="taskNameTextField" destination="b49-kv-6tV" id="JMj-Ue-ibZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEn-Wz-15M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
