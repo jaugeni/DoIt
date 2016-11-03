@@ -13,7 +13,6 @@
 		93C35FC21DCA586C0029FE1F /* DoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93C35FC01DCA586C0029FE1F /* DoIt.xcdatamodeld */; };
 		93C35FC41DCA586C0029FE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C35FC31DCA586C0029FE1F /* Assets.xcassets */; };
 		93C35FC71DCA586C0029FE1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C35FC51DCA586C0029FE1F /* LaunchScreen.storyboard */; };
-		93C35FD11DCA5D580029FE1F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C35FD01DCA5D580029FE1F /* Task.swift */; };
 		93C35FD41DCA73B70029FE1F /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C35FD31DCA73B70029FE1F /* CreateTask.swift */; };
 		93EDC88F1DCAB3F300514600 /* CompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDC88E1DCAB3F300514600 /* CompleteVC.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		93C35FC31DCA586C0029FE1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C35FC61DCA586C0029FE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93C35FC81DCA586C0029FE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93C35FD01DCA5D580029FE1F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		93C35FD31DCA73B70029FE1F /* CreateTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
 		93EDC88E1DCAB3F300514600 /* CompleteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +85,6 @@
 		93C35FD21DCA5DC80029FE1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93C35FD01DCA5D580029FE1F /* Task.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,7 +162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C35FD11DCA5D580029FE1F /* Task.swift in Sources */,
 				93C35FC21DCA586C0029FE1F /* DoIt.xcdatamodeld in Sources */,
 				93C35FBC1DCA586C0029FE1F /* TasksViewController.swift in Sources */,
 				93C35FD41DCA73B70029FE1F /* CreateTask.swift in Sources */,
